@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/work/long-form/story-1.jpg",
+      "destination": "/ads/advertorials/advertorial-matcha-toxic-relationship.jpg"
+    },
+    {
+      "source": "/work/long-form/story-2.jpg",
+      "destination": "/ads/advertorials/advertorial-glow25-collagen.jpg"
+    },
+    {
+      "source": "/work/long-form/story-2.pdf",
+      "destination": "/ads/advertorials/advertorial-glow25-collagen.pdf"
+    },
+    {
+      "source": "/work/:path*",
+      "destination": "/ads/:path*"
+    }
+  ]
+}
