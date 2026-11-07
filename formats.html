@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ad Formats | Dr. Amali Othmane</title>
+<meta name="description" content="Statics, video ads, VSLs, advertorials and briefs by Dr. Amali Othmane.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1a0a10;        /* oxblood */
+  --bg2:#240d16;       /* raised panels */
+  --burg:#7b1e32;      /* burgundy: buttons, highlights */
+  --burg-d:#5a1426;
+  --ink:#f4ebe0;       /* warm cream text */
+  --muted:#b9a2a6;
+  --rose:#c98a94;      /* dusty rose: labels */
+  --gold:#d4b483;      /* champagne gold: numbers, key words */
+  --line:rgba(201,138,148,.26);
+  --gline:rgba(212,180,131,.5);
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --mono:'Space Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--serif); line-height:1.6;
+  background-image:
+    radial-gradient(900px 520px at 90% -5%,rgba(123,30,50,.45),transparent 60%),
+    radial-gradient(700px 500px at -10% 45%,rgba(123,30,50,.2),transparent 60%);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+body::before{ /* retro film grain */
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;z-index:100;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.label{font-family:var(--mono);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose)}
+.gold{color:var(--gold)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#842036,#721b2e);border-bottom:1px solid var(--gline);box-shadow:0 6px 18px rgba(0,0,0,.35)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav .logo{font-family:var(--mono);font-size:.85rem;letter-spacing:.12em;text-decoration:none;color:var(--gold)}
+nav ul{display:flex;gap:22px;list-style:none}
+nav ul a{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:#ecd9dc}
+nav ul a:hover{color:var(--gold)}
+@media(max-width:700px){nav ul li:not(:last-child){display:none}}
+
+/* buttons */
+.btn{display:inline-block;font-family:var(--mono);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:14px 28px;border:1px solid var(--burg);background:var(--burg);color:var(--ink);transition:.2s;cursor:pointer}
+.btn:hover{background:transparent;color:var(--gold);border-color:var(--gold)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn:focus-visible,.tab:focus-visible,.fmt:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* sections */
+section{padding:84px 0}
+.sec-head{margin-bottom:38px}
+.sec-head h2{font-size:clamp(2rem,4.5vw,3rem);font-weight:400;margin-top:8px}
+.sec-head h2 em{color:var(--gold)}
+
+/* placeholders + cards (shared by home proof and formats page) */
+.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);
+  background:repeating-linear-gradient(45deg,#2a0e17,#2a0e17 10px,#310f1b 10px,#310f1b 20px);border:1px dashed var(--line)}
+.ph b{font-family:var(--serif);font-weight:400;font-size:1.6rem;color:var(--gold);letter-spacing:0}
+
+footer{padding:34px 0 48px;text-align:center;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
+
+
+.page-head{padding:64px 0 10px}
+.page-head h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:400;line-height:1.05;margin-top:10px}
+.page-head h1 em{color:var(--gold)}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:34px 0 26px}
+.tab{font-family:var(--mono);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding:12px 22px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:.2s}
+.tab:hover{color:var(--ink);border-color:var(--gold)}
+.tab[aria-selected="true"]{background:var(--burg);border-color:var(--burg);color:var(--ink)}
+.panel-note{max-width:680px;color:var(--muted);margin-bottom:28px}
+.panel-note b{color:var(--gold);font-weight:600}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+.grid.two{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid,.grid.two{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);background:var(--bg2);padding:10px}
+.card .media{width:100%;display:block;background:#0f0509;object-fit:cover}
+.card.ratio-45 .media{aspect-ratio:4/5}
+.card.ratio-916 .media{aspect-ratio:9/16}
+.card.ratio-169 .media{aspect-ratio:16/9}
+.card .media.ph{display:flex;background:repeating-linear-gradient(45deg,#2a0e17,#2a0e17 10px,#310f1b 10px,#310f1b 20px)}
+.card figcaption{padding:12px 4px 4px;font-size:.95rem}
+.card figcaption small{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-bottom:2px}
+.back{margin-top:56px}
+.cta-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;height:100%;text-decoration:none;color:var(--ink);
+  background:radial-gradient(120% 120% at 50% 0%,#8a2238,#4a1020);border:1px solid var(--gline)}
+.cta-tile small{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose)}
+.cta-tile b{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.2}
+.cta-tile b em{color:var(--gold)}
+.cta-tile span{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:3px}
+.card:has(.cta-tile):hover{border-color:var(--gold)}
+.card a.cardlink{display:block;text-decoration:none;color:inherit}
+.card .open{float:right;margin-left:12px;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.card:has(a.cardlink):hover{border-color:var(--gold)}
+/* statics: masonry, every ad shown whole (never cropped) */
+.mason{display:flex;gap:18px;align-items:flex-start}
+.mcol{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:18px}
+.card.bare{padding:8px}
+.card.bare .media{height:auto;object-fit:contain;background:none}
+.card img.media{cursor:zoom-in}
+.card a.cardlink img.media{cursor:pointer}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(10,3,6,.95);display:flex;padding:24px;cursor:zoom-out;overflow:auto}
+.lb[hidden]{display:none}
+.lb img{margin:auto;max-width:min(100%,1100px);height:auto;border:1px solid var(--gline);background:#fff}
+.lb button{position:fixed;top:14px;right:20px;background:none;border:0;color:var(--ink);font-size:2.4rem;line-height:1;cursor:pointer;text-shadow:0 0 8px #000}
+@media(max-width:560px){.mason,.mcol{gap:10px}.card.bare{padding:5px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html">DR. AMALI OTHMANE</a>
+    <ul>
+      <li><a href="index.html#proof">Proof</a></li>
+      <li><a href="index.html#process">Process</a></li>
+      <li><a href="index.html#contact" class="gold">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="label">The work</div>
+    <h1>Ads by <em>format</em></h1>
+  </div>
+</header>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="tabs" role="tablist" aria-label="Ad formats" id="tabs"></div>
+    <div id="panel" role="tabpanel"></div>
+    <div class="back"><a class="btn ghost" href="index.html">← Back to home</a></div>
+  </div>
+</section>
+
+<div class="lb" id="lb" hidden><button type="button" aria-label="Close">×</button><img alt=""></div>
+
+<footer>© <span id="yr"></span> Dr. Amali Othmane</footer>
+
+<script>
+/* =========================================================
+   EDIT THIS PART: your work, by format
+   1. Put your files in the "ads" folder
+   2. Replace src:"" with the file path, e.g. src:"ads/protein-static-1.jpg"
+      Videos work too, e.g. src:"ads/ugc-hook-1.mp4"
+   3. Change the text, add or delete lines freely.
+   Leave src:"" to show a placeholder box.
+   DOCUMENTS (briefs, scripts, advertorials): export the doc as a PDF, put it in
+   the "ads" folder, use a screenshot of its first page as src, and add
+   link:"ads/brief-1.pdf" to the same line. Clicking the card opens the PDF.
+   link can also be a web address, e.g. link:"https://..." for a live advertorial.
+   VIDEOS: put the .mp4 in ads/video, plus a preview picture (poster:"...jpg").
+   They play on click, one at a time. Use H.264 MP4 files under 25 MB.
+   STATICS and VIDEOS show as a gallery with no captions, every ad shown whole. Just list
+   the files; r (height divided by width) is optional and only helps balance columns.
+   Clicking an ad enlarges it.
+   The "id" must stay the same: the buttons on the home page use it.
+   ========================================================= */
+const FORMATS = [
+  {
+    id: "statics", name: "Statics", masonry: true,
+    note: "",
+    items: [
+      { src:"ads/static-01.jpg", r:1.7917 },
+      { src:"ads/static-02.jpg", r:1.0 },
+      { src:"ads/static-03.jpg", r:1.0 },
+      { src:"ads/static-04.jpg", r:1.7751 },
+      { src:"ads/static-05.jpg", r:1.0 },
+      { src:"ads/static-06.jpg", r:1.7751 },
+      { src:"ads/static-07.jpg", r:1.0 },
+      { src:"ads/static-08.jpg", r:1.0 },
+      { src:"ads/static-09.jpg", r:1.0 },
+      { src:"ads/static-10.jpg", r:1.0 },
+      { src:"ads/static-11.jpg", r:1.0 },
+      { src:"ads/static-12.jpg", r:1.7751 },
+      { src:"ads/static-13.jpg", r:1.7751 },
+      { src:"ads/static-14.jpg", r:1.7751 },
+      { src:"ads/static-15.jpg", r:1.7751 },
+      { src:"ads/static-16.jpg", r:1.0 },
+      { src:"ads/static-17.jpg", r:1.7758 },
+      { src:"ads/static-18.jpg", r:1.7768 }
+    ]
+  },
+  {
+    id: "video", name: "Video ads", masonry: true,
+    note: "",
+    items: [
+      { src:"ads/video/video-01.mp4", poster:"ads/video/video-01.jpg", r:1.7778 },
+      { src:"ads/video/video-02.mp4", poster:"ads/video/video-02.jpg", r:1.7778 },
+      { src:"ads/video/video-03.mp4", poster:"ads/video/video-03.jpg", r:1.7778 },
+      { src:"ads/video/video-04.mp4", poster:"ads/video/video-04.jpg", r:1.7778 },
+      { src:"ads/video/video-05.mp4", poster:"ads/video/video-05.jpg", r:1.7778 },
+      { src:"ads/video/video-06.mp4", poster:"ads/video/video-06.jpg", r:1.0 },
+      { src:"ads/video/video-07.mp4", poster:"ads/video/video-07.jpg", r:1.7778 },
+      { src:"ads/video/video-08.mp4", poster:"ads/video/video-08.jpg", r:1.7778 },
+      { src:"ads/video/video-09.mp4", poster:"ads/video/video-09.jpg", r:1.7778 },
+      { src:"ads/video/video-10.mp4", poster:"ads/video/video-10.jpg", r:1.7778 },
+      { src:"ads/video/video-11.mp4", poster:"ads/video/video-11.jpg", r:1.7778 },
+      { src:"ads/video/video-12.mp4", poster:"ads/video/video-12.jpg", r:1.7778 },
+      { src:"ads/video/video-13.mp4", poster:"ads/video/video-13.jpg", r:1.7778 },
+      { src:"ads/video/video-14.mp4", poster:"ads/video/video-14.jpg", r:1.7778 },
+      { src:"ads/video/video-15.mp4", poster:"ads/video/video-15.jpg", r:1.7778 },
+      { src:"ads/video/video-16.mp4", poster:"ads/video/video-16.jpg", r:1.7778 },
+      { src:"ads/video/video-17.mp4", poster:"ads/video/video-17.jpg", r:1.7778 },
+      { src:"ads/video/video-18.mp4", poster:"ads/video/video-18.jpg", r:1.7778 }
+    ]
+  },
+  {
+    id: "vsl", name: "VSL", masonry: true, cols: 2,
+    note: "Full VSL scripts and a finished VSL. Click a script to read the PDF.",
+    items: [
+      { src:"ads/vsl/vsl-protein-scripts.jpg", link:"ads/vsl/vsl-protein-scripts.pdf", title:"Premium protein · 3 VSL scripts", tag:"Script · PDF", r:1.4148 },
+      { src:"ads/vsl/vsl-leg-wraps-ab-test.jpg", link:"ads/vsl/vsl-leg-wraps-ab-test.pdf", title:"Leg recovery wraps · A/B test, 2 VSL scripts", tag:"Script · PDF", r:1.2941 },
+      { src:"ads/vsl/vsl-breathing-scripts.jpg", link:"ads/vsl/vsl-breathing-scripts.pdf", title:"Performance breathing · 2 VSL scripts", tag:"Script · PDF", r:1.4148 },
+      { src:"ads/vsl/vsl-video-01.mp4", poster:"ads/vsl/vsl-video-01.jpg", r:1.7778 }
+    ]
+  },
+  {
+    id: "advertorials", name: "Advertorials", masonry: true, cols: 2,
+    note: "Long-form pages that warm up cold traffic before the offer. Click the script to read the full advertorial.",
+    items: [
+      { src:"ads/advertorials/advertorial-matcha-toxic-relationship.jpg", r:1.5 },
+      { src:"ads/advertorials/advertorial-glow25-collagen.jpg", link:"ads/advertorials/advertorial-glow25-collagen.pdf", title:"Skincare & collagen · written advertorial", tag:"Advertorial · PDF", r:1.2941 },
+      { cta:"https://drive.google.com/drive/folders/1cIT1Ur9AwRCW35-3CHuuqvJZZ8X4I5wF?usp=drive_link", r:0.6 }
+    ]
+  },
+  {
+    id: "briefs", name: "Briefs", masonry: true, cols: 2,
+    note: "All the briefs are in my portfolio, which you can access right now.",
+    items: [
+      { cta:"https://drive.google.com/drive/folders/1cIT1Ur9AwRCW35-3CHuuqvJZZ8X4I5wF?usp=drive_link", r:0.6 }
+    ]
+  }
+];
+
+/* ---------- below this line, no need to edit ---------- */
+document.getElementById("yr").textContent = new Date().getFullYear();
+const tabsEl = document.getElementById("tabs");
+const panelEl = document.getElementById("panel");
+const isVideo = s => /\.(mp4|webm|mov)$/i.test(s);
+function esc(s){ const d=document.createElement("div"); d.textContent=s==null?"":s; return d.innerHTML; }
+
+let currentId = null;
+function mediaHTML(it, extra){
+  if(!it.src) return '<div class="media ph">Your ad here</div>';
+  if(isVideo(it.src)) return '<video class="media" src="'+esc(it.src)+'" controls playsinline preload="'+(it.poster?'none':'metadata')+'"'+(it.poster?' poster="'+esc(it.poster)+'"':'')+(extra||'')+'></video>';
+  return '<img class="media" loading="lazy" src="'+esc(it.src)+'" alt="'+esc(it.title||"Ad example")+'"'+(it.link?'':' tabindex="0" role="button"')+(extra||'')+'>';
+}
+function cardHTML(it, f, extra){
+  if(it.cta) return '<figure class="card bare"'+extra+'><a class="cta-tile" href="'+esc(it.cta)+'" target="_blank" rel="noopener"><small>There is more</small><b>Check my <em>full portfolio</em></b><span>Open on Google Drive ↗</span></a></figure>';
+  let media = mediaHTML(it, extra);
+  if(it.link) media = '<a class="cardlink" href="'+esc(it.link)+'" target="_blank" rel="noopener">'+media+'</a>';
+  const open = it.link ? '<span class="open">Open ↗</span>' : '';
+  const cap = (it.title || it.tag || it.link)
+    ? '<figcaption>'+open+(it.tag?'<small>'+esc(it.tag)+'</small>':'')+esc(it.title||"")+'</figcaption>' : '';
+  return '<figure class="card '+(f.masonry ? 'bare' : f.ratio)+'">'+media+cap+'</figure>';
+}
+const colCount = f => f.cols || (window.innerWidth >= 900 ? 3 : 2);
+function masonryHTML(f){
+  const n = colCount(f);
+  const cols = Array.from({length:n}, () => ({h:0, html:[]}));
+  f.items.forEach(it => {
+    const r = it.r || 1;
+    const c = cols.reduce((a, b) => b.h < a.h ? b : a);
+    c.html.push(cardHTML(it, f, it.r ? ' style="aspect-ratio:1/'+it.r+'"' : ''));
+    c.h += r + 0.05;
+  });
+  return '<div class="mason" data-n="'+n+'">'+cols.map(c => '<div class="mcol">'+c.html.join("")+'</div>').join("")+'</div>';
+}
+function show(id, setHash){
+  const f = FORMATS.find(x => x.id === id) || FORMATS[0];
+  currentId = f.id;
+  tabsEl.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.id === f.id));
+  if(setHash){ try{ history.replaceState(null, "", "#" + f.id); }catch(e){} }
+  const note = f.note ? '<p class="panel-note">' + f.note + '</p>' : '';
+  panelEl.innerHTML = note + (f.masonry ? masonryHTML(f)
+    : '<div class="grid'+(f.two?' two':'')+'">' + f.items.map(it => cardHTML(it, f)).join("") + '</div>');
+}
+/* re-balance the gallery when the screen size changes the column count */
+window.addEventListener("resize", () => {
+  const m = panelEl.querySelector(".mason");
+  const f = FORMATS.find(x => x.id === currentId);
+  if(m && f && Number(m.dataset.n) !== colCount(f)) show(currentId, false);
+});
+
+/* click an ad to enlarge */
+(function(){
+  const lb = document.getElementById("lb"), big = lb.querySelector("img");
+  const open = img => { big.src = img.currentSrc || img.src; big.alt = img.alt; lb.hidden = false; lb.scrollTop = 0; };
+  const close = () => { lb.hidden = true; big.removeAttribute("src"); };
+  panelEl.addEventListener("click", e => { const img = e.target.closest("img.media"); if(img && !img.closest("a")) open(img); });
+  panelEl.addEventListener("keydown", e => {
+    const img = e.target.closest && e.target.closest("img.media");
+    if(img && !img.closest("a") && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); open(img); }
+  });
+  lb.addEventListener("click", close);
+  /* only one video plays at a time */
+  panelEl.addEventListener("play", e => { panelEl.querySelectorAll("video").forEach(v => { if(v !== e.target) v.pause(); }); }, true);
+  document.addEventListener("keydown", e => { if(e.key === "Escape" && !lb.hidden) close(); });
+})();
+
+FORMATS.forEach((f, i) => {
+  const b = document.createElement("button");
+  b.className = "tab"; b.type = "button"; b.dataset.id = f.id;
+  b.setAttribute("role", "tab"); b.textContent = f.name;
+  b.addEventListener("click", () => show(f.id, true));
+  b.addEventListener("keydown", e => {
+    if(e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    const n = (i + (e.key === "ArrowRight" ? 1 : -1) + FORMATS.length) % FORMATS.length;
+    tabsEl.children[n].focus(); show(FORMATS[n].id, true);
+  });
+  tabsEl.appendChild(b);
+});
+window.addEventListener("hashchange", () => show(location.hash.slice(1), false));
+show(location.hash.slice(1), false);
+</script>
+</body>
+</html>
